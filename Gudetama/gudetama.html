@@ -6,16 +6,14 @@
 </head>
 
 <style>
+body{background-color: snow;width:1950px;}
+#head{position:relative ; height: 60px;background-color:black;padding: 1px}
+* {box-sizing: border-box;}
 
-body{background-color: snow;position:relative}
-
-#head{position:relative ; height: 60px;background-color:black;}
-#center{position:relative;float:left;width:950px;height:630px;background-color:white; background-image:url("https://yang4287.github.io/nttu10504101/125.gif");background-size:50%;background-repeat:no-repeat;background-position:center;}
+#center{float: left;position:relative;width:950px;height:630px;background-color:white; background-image:url("https://yang4287.github.io/nttu10504101/125.gif");background-size:50%;background-repeat:no-repeat;background-position:center;overflow: hidden;}
 #center img{display: block;position: absolute;top:0;left:0;
 opacity:0;filter: alpha(opacity=0);-webkit-animation: silder 12s linear infinite;animation: silder 12s linear infinite;}
-
 #center  img{width:950px;height:600px}
-
 @-webkit-keyframes silder {
     3% {
         opacity: 1;
@@ -48,71 +46,57 @@ opacity:0;filter: alpha(opacity=0);-webkit-animation: silder 12s linear infinite
 -webkit-animation-delay: 8s;
         animation-delay: 8s;            
 }
-
 #center img:nth-child(2) {
 -webkit-animation-delay: 4s;
         animation-delay: 4s;
 }
-
 #center img:nth-child(1) {
 -webkit-animation-delay: 0s;
         animation-delay: 0s;    
 }
-
 #center :hover img{
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
 }
-
-
 #mid{position:absolute;left:200px;bottom:-13px;}
 #mid1{position:absolute;left:450px;bottom:-13px;}
 #mid2{position:absolute;left:650px;bottom:-13px;}
-
-
 #title{position: absolute;left:750px;bottom:-20px;}
 #title1{position: absolute;left:950px;bottom:-20px;}
-#title2{position: absolute;left:1150px;bottom:-20px;}
-
 
 #column { float: left; width: 475px; height:630px;}
-#footer{clear:both;height:40px;color:#845201;}
-iframe#fb{position:absolute;left:1200px;bottom:-10px;}
+#footer{clear:both;height:50px;color:#845201;text-align: center;}
 
-
-#v{position:absolute;left:480px; bottom:0px;}
-#v:hover{opacity:0.8;}
-
-
-a#c{display:block;width:200px;background-color:black;text-align:center ;font-family:DFKai-sb}
-a#c:link {background-color:black;color: white;}
-a#c:visited {background-color:black;color:white}
-a#c:hover {background-color: white;color:gold ;font-size:80%;}
-a#c:active {background-color: black;}
+img#v{position:absolute;left:480px; bottom:0px;}
+img#v:hover{opacity:0.8;}
+#head a{display:block;width:200px;background-color:black;text-align:center ;font-family:DFKai-sb}
+#head a:link {background-color:black;color: white;}
+#head a:visited {background-color:black;color:white}
+#head a:hover {background-color: white;color:gold ;font-size:80%;}
+#head a:active {background-color: black;}
 
 a:link {color: black;}
 a:visited {color: black;}
 a:hover {background-color: white;color:black;font-size:120%; }
 a:active {background-color: white;}
+p#p{position: absolute;right: 1px;bottom:-15px;color:white;}
+s
+@media screen and (max-width:1095px) {
+#head{width: 100%};
+#center{width: 100%;};
+#column{width: 100%;};
+#colmn1{width: 100%;};
+#footer{width: 100%;};
 
-
-
-p#p{position:absolute;right:10px;bottom:-15px;color:white;}
-pre#p1{position:absolute;left:750px;bottom:0px;}
-
-
-
-
-
-
+}
 </style>
 
 <body>
 
 <div id="head">
-<h2><a href="gudetama.html"><img id="v" src="https://yang4287.github.io/nttu10504101/Gudetama/2.png" ></a>
-<h2 id="title"><a id="c" href="gudetama_1.html">個人資料</a></h2>
-<h2 id="title1"><a id="c" href="gudetama_2.html">小劇場</a></h2>
+<a href="gudetama.html"><img id="v" src="https://yang4287.github.io/nttu10504101/Gudetama/2.png" ></a>
+<h2 id="title"><a  href="gudetama_1.html">個人資料</a></h2>
+<h2 id="title1"><a href="gudetama_2.html">小劇場</a></h2>
 <p id="p">瀏覽次數:<img src='http://www.hit-counts.com/counter.php?t=MTQzMTc2Nw==' border='0' alt='professional logo'><BR></p>
 </div>
 
@@ -140,8 +124,8 @@ pre#p1{position:absolute;left:750px;bottom:0px;}
 </div>
 
 <div id="footer">
-<pre id="p1">本網站非官方網頁  / 開發者:楊育惠  / 聯絡資訊:0900-000-000  /   </pre>
- <iframe id="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fzh-tw.facebook.com%2Fgudetama.event%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="260" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<br>
+<pre >本網站非官方網頁  / 開發者:楊育惠  / 聯絡資訊:0900-000-000  /   <iframe  src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fzh-tw.facebook.com%2Fgudetama.event%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="260" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></pre>
 
 </div>
 
