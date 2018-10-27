@@ -6,39 +6,35 @@
 </head>
 
 <style>
-
-body{background-color: snow;position:relative}
-
-#head{position:relative ; height: 60px;background-color:black;}
-#center{position:relative;float:left;width:950px;height:500px;background-color: white; text-align:left;padding:10px;}
+body{background-color: snow;width:1950px;}
+#head{position:relative ; height: 60px;background-color:black;padding: 1px}
+* {box-sizing: border-box;}
+#center{float:left;position:relative;width:950px;height:500px;background-color: white; text-align:left;padding:10px;}
 #title{position: absolute;left:750px;bottom:-20px;}
 #title1{position: absolute;left:950px;bottom:-20px;}
-#title2{position: absolute;left:1150px;bottom:-20px;}
+
 #p{position:absolute;right:10px;bottom:-15px;color:white;}
+#column { float: left; width:475px; height: 500px;}
+#footer{clear:both;height:50px;color:#845201;text-align: center;}
+img#v{position:absolute;left:480px;bottom:0px;}
+img#v:hover{opacity:0.8;}
 
-#column { ;float: left; width:475px; height: 500px;}
-#footer{clear:both;height:40px;color:#845201;}
-iframe#fb{position:absolute;left:1200px;bottom:-10px;}
-
-
-#v{position:absolute;left:480px;bottom:0px;}
-#v:hover{opacity:0.8;}
-a#c{display:block;width:200px;background-color:black;text-align:center ;font-family:DFKai-sb;}
-
-
-h1.a{text-shadow:2px 2px 3px #999;color:gold; ;font-size: 300%;font-family:DFKai-sb;text-align: center;}
-pre#p1{position:absolute;left:750px;bottom:0px;}
 
 img#d{width:50px; height:50px}
-a#c:link {background-color:black;color: white;}
-a#c:visited {background-color:black;color: white}
-a#c:hover {background-color: white;color:gold;font-size:80%; }
-a#c:active {background-color: black;}
+#head a{display:block;width:200px;background-color:black;text-align:center ;font-family:DFKai-sb}
+#head a:link {background-color:black;color: white;}
+#head a:visited {background-color:black;color:white}
+#head a:hover {background-color: white;color:gold ;font-size:80%;}
+#head a:active {background-color: black;}
 
+@media screen and (max-width:1095px) {
+#head{width: 100%};
+#center{width: 100%;};
+#column{width: 100%;};
+#colmn1{width: 100%;};
+#footer{width: 100%;};
 
-
-
-
+}
 
 </style>
 
@@ -71,8 +67,7 @@ a#c:active {background-color: black;}
 </div>
 <div id="footer">
 
-<pre id="p1">本網站非官方網頁  / 開發者:楊育惠  / 聯絡資訊:0900-000-000  /   </pre>
- <iframe id="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fzh-tw.facebook.com%2Fgudetama.event%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="260" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<pre>本網站非官方網頁  / 開發者:楊育惠  / 聯絡資訊:0900-000-000  /   <iframe id="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fzh-tw.facebook.com%2Fgudetama.event%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="260" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></pre>
 
 </div>
 </body>
