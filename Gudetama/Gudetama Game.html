@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="C:\Users\user\Desktop\打蛋黃哥遊戲\favicon.ico"/>
+<mata charset = "utf-8" />
+ <title>Gudetama game</title>
+ 
+
+ <script src = "http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script></head>
+ <style type="text/css">
+ *{
+ margin: 0px;
+ padding: 0px;
+ }
+ body{background-image:url("1234.gif");background-repeat:no-repeat;background-position:right bottom;background-attachment:fixed;}
+ #background{
+ background-color: white;width:100%;display:none;height:660px;border:saddlebrown 2px solid ;
+ 
+ }
+ h2{
+ color: rgb(250, 183, 50);
+font-size: 50px;
+background-color: rgb(255, 255, 255);
+text-shadow: rgb(224, 224, 224) 1px 1px 0px;
+  
+ }
+ h1{position: absolute; top:60%; left:52%;transform: translate(-60%, -52%);color:#CC6600;}
+ 
+ img{float:left;border:0;
+  width: 25%;
+  height:165px;
+ }
+
+ h3{color:	#ea7500;
+ 	;}
+
+ #content{position: relative;
+  
+  margin: auto;
+  width: 50%;height:850px;
+  background-color: white;border:0 ;
+ }
+ #content1{display:block; position: relative;
+  width: 100%;height:660px;
+  background-image:url("123.gif");background-position:right top ;background-repeat:no-repeat;
+text-align:center;background-color: #FFEE99;border:saddlebrown 2px solid ;}
+ #count{
+ width: 320px;
+ height: 43px;
+ background-color:	#FFFAF0; 
+ 
+ text-align: center;
+ color: red;
+ font-size: 18px;;
+
+ font-family: "微軟正黑體";
+ }
+ 
+ #count .score{
+ text-align: center;
+ color: red;
+ font-size: 20px;
+ line-height:55px;
+ font-family: "微軟正黑體";
+ }
+ 
+ #history #id{
+ text-align: center;
+ color: #8B4513;
+ font-size: 20px;
+ line-height: 30px;
+ font-family: "微軟正黑體";
+ }
+ #history{
+ position: absolute;
+ top:60px;
+ right:0px;
+ width: 180px;
+ height: 50px;
+ background-color: 	#FFE4B5;
+ color: #8B4513;
+ font-size:20px;
+ line-height: 60px;
+ text-align: center;
+ }
+ .clock{
+ position: absolute;
+ top:10px;
+ right:0px;
+ width: 180px;
+ height: 50px;
+ background-color: #CD853F;
+ color: white;
+ font-size: 20px;
+ text-align: center;
+ line-height: 60px;
+ }
+ #cover{
+
+ position: absolute;
+top:50%;left:50%;
+ width: 300px;
+ height: 200px;
+line-height:80px;
+ background :snow;
+ color: #8B4513;
+ font-size: 30px;
+ text-align: center;
+ vertical-align: middle;border-radius: 29%; 
+-webkit-border-radius: 29%; 
+-moz-border-radius: 29%;
+transform: translate(-50%, -50%);
+ }
+
+#playbtn{background-image:url("4.png");background-size:cover;width:52px;height:50px;background-repeat:no-repeat;}
+
+
+#start{position: absolute; top:70%; left:55%;transform: translate(-70%, -55%);font-size:150%;width:25%;height:9%;border-radius: 50%; 
+-webkit-border-radius: 50%; 
+-moz-border-radius: 50%;background-color:#FFAA33;color:snow;line-height:30px;}
+#start:hover{opacity:0.6;background-color:	#FFBB66;width:24%;height:8%;font-size:130%;}
+
+
+ </style>
+
+<body>
+
+ 
+<div id = "content">
+<h2>Beat the Gudetama</h2><br/>
+<h3 ><input type="button" onclick="playOrPause()" id="playbtn"></input>遊戲方法:點擊蛋黃哥將獲得分數；點擊咖波將遭到扣分!!</h3>
+<audio id="audio" src="蛋黃哥主題曲.mp3" autoplay="autoplay" loop="loop"  ></audio>
+
+
+<audio id="audio2" src="1.mp3"  ></audio>
+<div id="content1">
+<h1>Gudetama</h1>
+<div id="start" onclick="display();" ><p>START</p><p>GAME</p></div>
+</div>
+<div id = "background">
+ 
+ 
+<img src="123.PNG" ><img src="123.PNG"><img src="123.PNG" >
+<img src="123.PNG" ><img src="123.PNG"><img src="123.PNG" >
+<img src="123.PNG" ><img src="123.PNG"><img src="123.PNG" >
+<img src="123.PNG" ><img src="123.PNG"><img src="123.PNG" >
+<img src="123.PNG" ><img src="123.PNG"><img src="123.PNG">
+<img src="123.PNG">
+</div>
+ 
+
+
+
+<div id = "count">當前得分 ：<span class = "score"> 0 </span>分</div>
+<div id = "history">最佳紀錄: <span id = "score1"> 0 </span>分</div>
+<div class = "clock">遊戲時間:60秒</div>
+
+</div>
+ 
+<div id = "cover" style="display:none"> <span id = "text" ></span></div>
+<script type="text/javascript">
+
+//1 先获取到所有的坑(图片)
+var content = document.getElementById('content');
+var cover = document.getElementById('cover');
+var image = document.getElementsByTagName('img');
+var countMouse = document.getElementById('count');
+var score = countMouse.querySelector(".score");
+var history = document.getElementById("history");
+var score1 = document.getElementById("score1");
+var div = document.querySelector(".clock");
+var text = document.getElementById("text");
+var preScore = 0;
+var ranK;
+var count = 0;
+var x = document.getElementById("content1");
+var y =document.getElementById("background");
+
+function display(){
+
+
+if (y.style.display === "none") {
+y.style.display = "block";x.style.display="none";countDown(seconds,speed);
+
+
+} else {
+x.style.display = "block";y.style.display="none";
+}
+}
+
+
+
+preScore = localStorage.getItem("bestScore");
+console.log(preScore);
+score1.innerHTML = preScore;
+ 
+//让老鼠随机出现在一个坑里
+
+setTimeout( "chulai1()", Math.random()*800+800);
+setTimeout( "chulai()", Math.random()*800+350);
+
+
+
+function chulai(){
+ try{
+ ranK = Math.floor(Math.random() * 16);
+
+ image[ranK].src = "12.gif";
+
+ image[ranK].style.marginTop = "0px";
+
+ image[ranK].setAttribute("onclick","die()");
+ 
+if (seconds==0) {clearTimeout("paole()", Math.random()*800+350)}else{setTimeout("paole()", Math.random()*800+350);}
+
+ 
+
+ }catch(ex){}
+}
+
+ 
+function chulai1(){
+ try{
+ ranK1 = Math.floor(Math.random() * 16);
+
+ image[ranK1].src = "87.gif";
+
+ image[ranK1].style.marginTop = "0px";
+
+ image[ranK1].setAttribute("onclick","die1()");
+ 
+if (seconds==0) {clearTimeout("paole1()", Math.random()*800+1500)}else{setTimeout("paole1()", Math.random()*800+1500);}
+
+ 
+
+ }catch(ex){}
+}
+
+
+//2 老鼠回去了
+function paole(){
+ try{
+ image[ranK].src = "123.PNG";
+ image[ranK].style.marginTop = "0px";
+ image[ranK].removeAttribute("onclick");
+
+if (seconds==0) {clearTimeout("chulai()", Math.random()*800+350)}else{setTimeout("chulai()", Math.random()*800+350)}
+
+  }catch(ex){}
+}
+function paole1(){
+ try{
+ image[ranK1].src = "123.PNG";
+ image[ranK1].style.marginTop = "0px";
+ image[ranK1].removeAttribute("onclick");
+
+if (seconds==0) {clearTimeout("chulai1()", Math.random()*800+800)}else{setTimeout("chulai1()", Math.random()*800+800)}
+
+  }catch(ex){}
+}
+//3 老鼠被打死了
+ 
+function die(){
+ try{
+ image[ranK].src = "123.PNG";
+ image[ranK].removeAttribute("onclick");
+ image[ranK].style.marginTop = "0px";
+ var audio2  =    document.getElementById("audio2");
+if(audio2.paused){
+            audio2.play();};
+ count++;
+ score.innerHTML =count;
+ 
+ 
+ if( count > preScore)
+ {
+  score1.innerHTML = count;
+  preScore = count;
+ }
+ localStorage.setItem("bestScore",preScore);
+ }catch(ex){
+ 
+ }
+}
+
+function die1(){
+ try{
+ image[ranK1].src = "123.PNG";
+ image[ranK1].removeAttribute("onclick");
+ image[ranK1].style.marginTop = "0px";
+ var audio2  =    document.getElementById("audio2");
+
+ count--;
+ score.innerHTML =count;
+ 
+ 
+ if( count > preScore)
+ {
+  score1.innerHTML = count;
+  preScore = count;
+ }
+ localStorage.setItem("bestScore",preScore);
+ }catch(ex){
+ 
+ }
+}
+ 
+//设置一个定时器
+var seconds = 59;
+var speed = 1000;
+
+
+
+function countDown(seconds,speed){
+  var txt = "剩餘時間：" + ((seconds < 10) ? "0" + seconds : seconds) +"秒";
+  div.innerHTML = txt;
+
+  
+  var timeId = setTimeout("countDown(seconds--,speed)",speed);
+  if(seconds == 0){
+   //localStorage.setItem("scoreshow",count);
+   localStorage.setItem("bestScore",preScore);
+   
+
+   clearTimeout(timeId);
+ 
+   if(cover.style.display == "none"){
+    cover.style.display = "block";
+   if(count === undefined){
+    text.innerHTML = "當前成績為："+0+"分"+"<br/>"+"游戲结束！";}
+ 
+   else if(count == localStorage.getItem("bestScore")){
+    text.innerHTML = "當前成績為："+count+"分"+"<br/>"+"恭喜您打破紀錄"+"<br/>"+"游戲结束！";
+    }
+   else{
+    text.innerHTML = "當前成績為："+count+"分"+"<br/>"+"游戲结束！";
+    } 
+	}
+   }
+ }
+
+ 
+
+ 
+
+
+function playOrPause(){
+            var audio  =    document.getElementById("audio");
+            if(audio.paused){
+            audio.play();
+document.getElementById("playbtn").style.backgroundImage = "url(4.png)";
+                }else if(audio.played){
+                    audio.pause();
+    document.getElementById("playbtn").style.backgroundImage = "url(5.png)";
+                }
+            }
+ 
+</script>
+</body>
+</html>
