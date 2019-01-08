@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>Gudetama</title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<style>
+body{background-color: snow;width:100%;height:1000px;margin:0;}
+#n { height: 60px;width:100%;font-size:20px;text-align:center;;background-color:black;position:fixed;top:0px;display: block;padding-left:250px; transition: top 0.1s;}
+#main {width:100%;height:1000px;transition:0.1s;}
+
+#content{position:relative;
+	width:60%;margin:auto;height:800px;background-color:white;margin-top:100px;
+}
+
+
+ ul { /* 取消ul預設的內縮及樣式 */
+ 		padding:0px;margin:0px;
+        list-style: none;
+    }
+
+    ul.drop-down-menu {width:100%;padding:0px;
+ 
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    ul.drop-down-menu li {width:18%;
+        position: relative; vertical-align: top;
+
+    }
+
+    ul.drop-down-menu >li:last-child {
+        border-right: none;
+    }
+
+    ul.drop-down-menu > li {
+        float: left; /* 只有第一層是靠左對齊*/
+    }
+
+     ul.drop-down-menu a#g {
+        background-color: black;
+        color: white;
+        display: block;
+        padding-top:20px;
+        text-decoration: none;
+        line-height: 40px;
+        font-family:微軟正黑體;
+
+    }
+
+    ul.drop-down-menu a#g:hover { /* 滑鼠滑入按鈕變色*/
+        background-color: white;opacity:0.87;
+        color: black;
+    }
+ 
+ 
+
+
+
+
+li img{max-width:80%;height:60px;}
+li img:hover{opacity:0.6;}
+
+#p{font-size:150%;font-family:微軟正黑體;}
+
+img#d{width:50px; height:50px}
+#footer{clear:both;height:50px;color:#845201;text-align: center;}
+#i{float:left;width:20%;height: 200px}
+#ii{width: 100%;height: 200px}
+img#e{width:50px; height:35px}
+h2{font-family:微軟正黑體;}
+</style>
+<body>
+	<div><nav id="n">	<ul class="drop-down-menu">
+		<li><a  href="gudetama.html"><div><img src="2.png"></div></a></li>
+		<li><a id="g" href="gudetama_1.html"><img id="e" src="a1.png">個人資料</a></li>
+		<li><a id="g" href="gudetama_2.html"><img id="e" src="a2.png">小劇場</a></li>
+		<li><a id="g" href="gudetama_3.html"><img id="e" src="a3.png">小遊戲</a> </li>
+	
+		</ul></nav></div>
+
+	<div id="main">
+	<div id="content">
+	
+        <div id="ii"><img id="i" src="7.jpg"><img id="i" src="5.jpg"><img id="i" src="4.jpg"><img id="i" src="6.png"><img id="i" src="3.jpg"></div>
+        <br><br>
+	<h2><sup>&dtrif;</sup>性格<img id="d" src="https://5.share.photo.xuite.net/skyleo/15f68b0/19719520/1107985488_x.jpg"
+/></h2>
+<pre   id="p">  甚麼事都不想做</pre>
+<h2><sup>&dtrif;</sup>喜歡的事<img id="d" src="https://5.share.photo.xuite.net/skyleo/15f681b/19719520/1107985851_x.jpg" /></h2>
+<pre id="p" >  甚麼都不做</pre>
+<h2><sup>&dtrif;</sup>喜歡的調味料<img id="d" src="https://5.share.photo.xuite.net/skyleo/15f68fd/19719520/1107986845_x.jpg" /></h2>
+<pre  id="p">  濃味醬油</pre>
+<br>
+<div id="ii"><img id="i" src="7.jpg"><img id="i" src="5.jpg"><img id="i" src="4.jpg"><img id="i" src="6.png"><img id="i" src="3.jpg"></div>
+
+		
+
+		</div> 
+		<br>
+<div id="footer">
+<pre>本網站非官方網頁  / 開發者:楊育惠  / 聯絡資訊:0900-000-000  /   <iframe id="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fzh-tw.facebook.com%2Fgudetama.event%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="260" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></pre>
+</div>
+
+		</div>
+
+
+<script>
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+if (prevScrollpos > currentScrollPos) {
+document.getElementById("n").style.top = "0px";
+} else {
+document.getElementById("n").style.top = "-60px";
+}
+prevScrollpos = currentScrollPos;
+}
+
+</script>
+</body>
+</html>

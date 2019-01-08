@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>Gudetama</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+
+<script src = "http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<style>
+body{background-color: snow;width:100%;height:1000px;margin:0px;}
+#n { height: 60px;width:100%;font-size:20px;text-align:center;;background-color:black;position:fixed;top:0px;padding-left:250px;display: block; transition: top 0.1s;}
+#sidebar {display:block;
+height: 100%; width:250px; position: fixed; z-index: 1;
+top:0; left: 0; background-color:black; transition: 0.5s;padding-top:60px;
+}
+#main {width:100%;height:1000px;margin-left:250px;transition:0.1s;}
+#a{border-radius: 0px 100px 100px 0px; 
+-webkit-border-radius: 0px 100px 100px 0px; 
+-moz-border-radius: 0px 100px 100px 0px; 
+ position:fixed; 
+top: 100px; left:250px;  transition: 0.1s;
+}
+
+#content{
+	width:60%;margin:auto;height:900px;background-color:white;margin-top:100px;
+}
+ ul { /* 取消ul預設的內縮及樣式 */
+ 		padding:0px;margin:0px;
+        list-style: none;
+    }
+
+    ul.drop-down-menu {width:100%;padding:0px;
+ 
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    ul.drop-down-menu li {width:18%;
+        position: relative; vertical-align: top;
+
+    }
+
+    ul.drop-down-menu >li:last-child {
+        border-right: none;
+    }
+
+    ul.drop-down-menu > li {
+        float: left; /* 只有第一層是靠左對齊*/
+    }
+
+     ul.drop-down-menu a#g {
+        background-color: black;
+        color: white;
+        display: block;
+        padding-top:20px;
+        text-decoration: none;
+        line-height: 40px;
+        font-family:微軟正黑體;
+
+    }
+
+    ul.drop-down-menu a#g:hover { /* 滑鼠滑入按鈕變色*/
+        background-color: white;opacity:0.87;color: black;
+       
+    }
+ 
+ 
+
+
+#k{max-width:80%;height:60px;}
+#k:hover{opacity:0.6;}
+
+#z{text-decoration:none;color:white;line-height: 40px;}
+h3{color:gold;}
+h1{color:#272727;}
+#e{width:50px; height:35px}
+
+#game{width:98%;margin:auto;height:705px;border:saddlebrown 2px solid ;position:relative;background-color:#FFDC6B;background-image:url("sor.png");background-repeat:no-repeat;background-position:right bottom;background-size:45%;}
+
+.h1{background-color:	#f0f0f0;padding:0px 30px;box-shadow:0 0 10px #d0d0d0 inset;}
+#playbtn{background-image:url("21.png");background-size:cover;width:52px;height:52px;background-repeat:no-repeat;position:absolute;right:12px;bottom:0;}
+#footer{clear:both;height:50px;color:#845201;text-align: center;}
+</style>
+<body>
+	<div><nav id="n">	<ul class="drop-down-menu">
+		<li><a  href="gudetama.html"><div><img id="k" src="2.png"></div></a></li>
+		<li><a id="g" href="gudetama_1.html"><img id="e" src="a1.png">個人資料</a></li>
+		<li><a id="g" href="gudetama_2.html"><img id="e" src="a2.png">小劇場</a></li>
+		<li><a id="g" href="gudetama_3.html"><img id="e" src="a3.png">小遊戲</a> </li>
+	
+		</ul></nav></div>
+
+	<div id="sidebar" >
+	<h3>遊戲列表</h3>
+	<ul>
+		<li><a id="z" href="game_1.html">懶得打蛋黃哥</a></li>
+		<li><a id="z" href="game_2.html">不想拼圖</a></li>
+		<li><a id="z" href="game_3.html">拉丁矩陣</a></li>
+		<li><a id="z" href="game_4.html">飛向終點</a></li>
+		<li><a id="z" href="game_5.html">切水果</a></li>
+
+
+		</ul>
+		<div onclick="playOrPause()" id="playbtn"></div>
+		<audio id="audio" src="蛋黃哥主題曲.mp3" autoplay="autoplay" loop="loop"  ></audio>
+	</div>
+	<div id="main"><div><img id="a" onclick="openclose()" src="收.png"></div>
+	<div id="content">
+			<div class="h1">
+				<h1>懶得打蛋黃哥</h1>
+				</div>
+			<div id="game"> 
+			<pre style="color:red; font-size:150%">由於開發技術不全，請點擊下方按鈕，開啟遊戲畫面</pre>
+				<button><a style="color:#844200" href="game_11.html">開始遊戲</a></button>
+	 
+</div>
+		
+
+		
+			
+		</div></div>
+		<div id="footer">
+		<pre>本網站非官方網頁  / 開發者:楊育惠  / 聯絡資訊:0900-000-000  /   <iframe id="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fzh-tw.facebook.com%2Fgudetama.event%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="260" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></pre>
+		</div>
+
+<script>
+var sidebar=document.getElementById("sidebar");
+var main=document.getElementById("main");
+var a=document.getElementById("a");
+var n=document.getElementById("n");
+var content=document.getElementById("content");
+function openclose(){
+if(sidebar.style.display==="block"){sidebar.style.display="none";a.style.left="0px";a.src="開.png";;main.style.marginLeft="0px";n.style.paddingLeft="0px";}
+else{sidebar.style.display="block";a.style.left="250px";a.src="收.png";main.style.marginLeft="250px";n.style.paddingLeft="250px";}
+
+
+}
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+if (prevScrollpos > currentScrollPos) {
+document.getElementById("n").style.top = "0";
+} else {
+document.getElementById("n").style.top = "-60px";
+}
+prevScrollpos = currentScrollPos;
+}
+
+
+
+
+function playOrPause(){
+            var audio  =    document.getElementById("audio");
+            if(audio.paused){
+            audio.play();
+document.getElementById("playbtn").style.backgroundImage = "url(21.png)";
+                }else if(audio.played){
+                    audio.pause();
+    document.getElementById("playbtn").style.backgroundImage = "url(211.png)";
+                }
+            }
+
+</script>
+</body>
+</html>

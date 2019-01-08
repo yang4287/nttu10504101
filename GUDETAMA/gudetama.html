@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>Gudetama</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<style>
+body{background-color: snow;width:100%;height:1000px;margin:0;}
+#n { height: 60px;width:100%;font-size:20px;text-align:center;;background-color:black;position:fixed;top:0px;display: block;padding-left:250px; transition: top 0.1s;}
+
+#main {width:100%;height:700px;transition:0.1s;}
+
+#content{position:relative;
+	width:60%;margin:auto;height:600px;background-color:white;margin-top:100px;
+}
+
+ ul { /* 取消ul預設的內縮及樣式 */
+ 		padding:0px;margin:0px;
+        list-style: none;
+    }
+
+    ul.drop-down-menu {width:100%;padding:0px;
+ 
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    ul.drop-down-menu li {width:18%;
+        position: relative; vertical-align: top;
+
+    }
+
+    ul.drop-down-menu >li:last-child {
+        border-right: none;
+    }
+
+    ul.drop-down-menu > li {
+        float: left; /* 只有第一層是靠左對齊*/
+    }
+
+     ul.drop-down-menu a#g {
+        background-color: black;
+        color: white;
+        display: block;
+        padding-top:20px;
+        text-decoration: none;
+        line-height: 40px;
+        font-family:微軟正黑體;
+
+    }
+
+    ul.drop-down-menu a#g:hover { /* 滑鼠滑入按鈕變色*/
+        background-color: white;opacity:0.87;
+        color: black;
+    }
+ 
+  
+
+
+
+li img{max-width:80%;height:60px;}
+li img:hover{opacity:0.9;}
+
+
+
+
+.go{max-width:100%;height:auto;}
+#footer{clear:both;height:50px;color:#845201;text-align: center;}
+img#e{width:50px; height:35px}
+</style>
+<body>
+	<div><nav id="n">	<ul class="drop-down-menu">
+		<li><a  href="gudetama.html"><div><img src="2.png"></div></a></li>
+		<li><a id="g" href="gudetama_1.html"><img id="e" src="a1.png">個人資料</a></li>
+		<li><a id="g" href="gudetama_2.html"><img id="e" src="a2.png">小劇場</a></li>
+		<li><a id="g" href="gudetama_3.html"><img id="e" src="a3.png">小遊戲</a></li>
+	
+		</ul></nav></div>
+
+	<div id="main">
+	<div id="content">
+	<div class="go">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="https://www.facebook.com/GudetamaChefTaichung/" title="台中蛋黃哥主題餐廳"><img class="d-block w-100" src="c1.jpg" alt="First slide" ></a>
+    </div>
+    <div class="carousel-item">
+      <a href="https://www.beauty321.com/post/19713" title="屈臣氏集點活動"><img class="d-block w-100" src="c2.jpg" alt="Second slide"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="http://ayg3104.pixnet.net/blog/post/348284956-%E3%80%90%E5%8F%B0%E5%8C%97%E3%80%82%E5%B1%95%E8%A6%BD%E3%80%91%E8%9B%8B%E9%BB%83%E5%93%A5%E6%87%B6%E5%BE%97%E9%80%B2%E5%8C%96%E5%8F%B2%E5%B1%95--%E5%93%A5%E7%9A%84%E6%87%B6" title="2018懶得進畫展"><img class="d-block w-100" src="c3.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+
+		
+
+		</div> 
+		<div id="footer">
+<pre>本網站非官方網頁  / 開發者:楊育惠  / 聯絡資訊:0900-000-000  /   <iframe id="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fzh-tw.facebook.com%2Fgudetama.event%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="260" height="50" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></pre>
+</div>
+
+
+
+		</div>
+
+
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+if (prevScrollpos > currentScrollPos) {
+document.getElementById("n").style.top = "0";
+} else {
+document.getElementById("n").style.top = "-60px";
+}
+prevScrollpos = currentScrollPos;
+}
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
